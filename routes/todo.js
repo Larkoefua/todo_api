@@ -9,7 +9,7 @@ todoRouter.post('/todos', addTodo);
 
 todoRouter.get('/todos', getTodos);
 
-todoRouter.patch('/todo/:id', updateTodo);
+todoRouter.patch('/todos/:id', updateTodo);
 
 todoRouter.delete('/todos/:id', deleteTodo)
 
