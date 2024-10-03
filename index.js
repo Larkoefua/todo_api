@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import todoRouter from './routes/todo.js';
 import userRouter from './routes/user.js';
-
+import cors from 'cors';
 // connect to database
 await mongoose.connect(process.env.MONGO_URI); /*always remember to name the database with the name of your app, thta after the .net(slash) bit before the ? */
 
@@ -48,6 +48,7 @@ const app = express();
 
 
 // use middle wares
+app.use(cors())
 app.use(express.json())
 
 // use routes(this is what we use now)
