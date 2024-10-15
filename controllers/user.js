@@ -1,14 +1,18 @@
 // register, log in , log out
 
 // An export function
-export const register = (req, res, next) => {
+export const registerUser = (req, res, next) => {
     res.json('User Registerd');
 }
 
-export const login = (req, res, next) => {
+export const loginUser = (req, res, next) => {
     res.json('User Logged In');
 }
 
-export const logout = (req, res, next) => {
+export const logoutUser = (req, res, next) => {
     res.json('User Logged Out');
+}
+
+export const updateProfile =(req,res,next) => {
+    res.json('user profile updated')
 }

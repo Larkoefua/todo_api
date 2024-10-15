@@ -8,4 +8,4 @@ const userSchema = new Schema({
    
 });
 
-export const userSchema = model('user',)
+export const UserSchema = model('User', userSchema)

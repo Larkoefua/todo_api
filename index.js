@@ -47,9 +47,9 @@ const app = express();
 // })
 
 
-// use middle wares
-app.use(cors())
-app.use(express.json())
+// use middlewares
+app.use(cors());
+app.use(express.json());
 
 // use routes(this is what we use now)
 app.use(todoRouter);
