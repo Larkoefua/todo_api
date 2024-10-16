@@ -6,6 +6,9 @@ const todoSchema = new Schema({
   title: { type: String, required: true },
   icon: { type: String, required: true },
   completed: { type: Boolean, default: false }
+}, {
+  timestamps: true
+
 }); /* a new Schema acts as a template for todo only*/
 
 todoSchema.plugin(toJSON);
