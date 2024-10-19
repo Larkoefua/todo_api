@@ -9,7 +9,7 @@ export const addTodo = async (req, res, next) => {
     // validate user input(1)
     const { error, value } = addTodoValidator.validate({
       ...req.body,
-      icon: req.file?.filename /*this is how to receive the url */,
+      icon: req.file?.filename /*this is how to receive the url */
     });
     if (error) {
       return res.status(422).json(error);
@@ -60,3 +60,5 @@ export const updateTodo = (req, res, next) => {
 export const deleteTodo = (req, res, next) => {
   res.json("Todo Deleted"); //name export, importing it would need a named import
 };
+
+// const filter ={"title":{"$regex":`${searchTerm}`,"$options":"i"}} - this is how the frontends would search

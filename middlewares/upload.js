@@ -8,7 +8,7 @@ export const /*remoteUpload*/ todoIconUpload = multer({
     apiAccessToken: process.env.SAVEFILESORG_API_KEY,
     relativePath: "/todo-api/todos/*",
   }),
-  preservePath: true,
+  preservePath: true
 });
 
 export const /*remoteUpload*/ userAvaterUpload = multer({
@@ -16,5 +16,5 @@ export const /*remoteUpload*/ userAvaterUpload = multer({
       apiAccessToken: process.env.SAVEFILESORG_API_KEY,
       relativePath: "/todo-api/users/*",
     }),
-    preservePath: true,
+    preservePath: true
   });
