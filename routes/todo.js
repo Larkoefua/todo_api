@@ -5,7 +5,7 @@ import {
   getTodos,
   updateTodo,
 } from "../controllers/todo.js";
-import { localUpload, /*remoteUpload*/ todoIconUpload } from "../middlewares/upload.js";
+import { /*localUpload, remoteUpload*/ todoIconUpload } from "../middlewares/upload.js";
 
 // create a router
 const todoRouter = Router();
