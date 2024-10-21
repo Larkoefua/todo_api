@@ -1,7 +1,9 @@
 import { Router } from "express";
 import {
   addTodo,
+  countTodos,
   deleteTodo,
+  getTodo,
   getTodos,
   updateTodo,
 } from "../controllers/todo.js";
@@ -14,6 +16,10 @@ const todoRouter = Router();
 todoRouter.post("/todos", /*localUpload remoteUpload*/todoIconUpload.single("icon"), addTodo);
 
 todoRouter.get("/todos", getTodos);
+
+todoRouter.get("/todos/count", countTodos);/*the count comes first or make it come before the post */
+
+todoRouter.get("/todos/:id", getTodo );
 
 todoRouter.patch("/todos/:id", updateTodo);
 

@@ -28,7 +28,7 @@ export const registerUser = async (req, res, next) => {
             to: value.email,
             subject: 'user registration',
             text: 'Account Registered Successfully'
-        })
+        });
         // value.password = hashedPassword; this is called mutation of the value joi provided
         await UserModel.create({
 
@@ -66,6 +66,8 @@ export const loginUser = async (req, res, next) => {
         if (!correctPassword){
             return res.status(401).json('Invalid Credentials!');
         }
+
+        //continue here for advert APi
         // Sign a token for  user
         const token = jwt.sign(
             {id:user.id}, 
@@ -104,13 +106,14 @@ export const logoutUser = (req, res, next) => {
     });
 }
 
-export const updateProfile = (req, res, next) => {
+export const updateProfile = async (req, res, next) => {
    try {
     // validate user input
     const{error, value} = updateProfileValidator.validate(req.body);
     if (error) {
             return res.status(422).json(error);
         }
+        await UserModel.findByIdAndUpdate(value)
      res.json('user profile updated')
    } catch (error) {
     next(error)
