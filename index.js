@@ -3,8 +3,9 @@ import mongoose from 'mongoose';
 import todoRouter from './routes/todo.js';
 import userRouter from './routes/user.js';
 import cors from 'cors';
+
 // connect to database
-await mongoose.connect(process.env.MONGO_URI); /*always remember to name the database with the name of your app, thta after the .net(slash) bit before the ? */
+await mongoose.connect(process.env.MONGO_URI); /*always remember to name the database with the name of your app, that after the .net(slash) bit before the ? */
 
 // create an express app
 const app = express();
@@ -62,5 +63,5 @@ app.use(userRouter);
 // });
 
 app.listen(3000, () => {
-    console.log('App is listening on port 3000')
+    console.log('App is listening on port 3000');
 });

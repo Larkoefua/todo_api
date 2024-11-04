@@ -67,7 +67,6 @@ export const loginUser = async (req, res, next) => {
             return res.status(401).json('Invalid Credentials!');
         }
 
-        //continue here for advert APi
         // Sign a token for  user
         const token = jwt.sign(
             {id:user.id}, 

@@ -7,7 +7,7 @@ export const mailTransporter = createTransport({
     secure: /*false*/ true,
     auth: {
         user: 'djabateylarko@gmail.com',
-        pass: 'reclfpyodhpoocde'
+        pass: process.env.EMAIL_PASSWORD_KEY
     },
     from: 'djabateylarko@gmail.com'
 });
